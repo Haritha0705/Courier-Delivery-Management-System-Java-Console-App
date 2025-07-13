@@ -22,44 +22,77 @@ public class Package {
         this.assignedAgent = assignedAgent;
     }
 
-    //crete getter and setters
-    public String getPackageId(){
+    // Getters
+    public String getPackageId() {
         return packageId;
     }
-    public String setSenderName(String senderName){
-        this.senderName=senderName;
+
+    public String getSenderName() {
         return senderName;
     }
-    public String setReceiverName(String receiverName){
-        this.receiverName=receiverName;
+
+    public String getReceiverName() {
         return receiverName;
     }
 
-    public String setAddress(String address){
-        this.address=address;
+    public String getAddress() {
         return address;
     }
-    public double setWeight(double weight){
-        this.weight=weight;
+
+    public double getWeight() {
         return weight;
     }
 
-    public String setType(String type){
-        this.type=type;
+    public String getType() {
         return type;
     }
-    public String setStatus(String status){
-        this.status=status;
+
+    public String getStatus() {
         return status;
     }
-    public DeliveryAgent setAssignedAgent(DeliveryAgent assignedAgent){
-        this.assignedAgent=assignedAgent;
+
+    public DeliveryAgent getAssignedAgent() {
         return assignedAgent;
     }
 
-    @Override
-    public String toString(){
-        return "Id: " + packageId + ", SName: " + senderName + ", RName: " + receiverName + ", Address: " + address + ", Weight: " + weight + ", Type: " + type + ", Status: " + status+ ", Assigned Agent: " + assignedAgent;
+    // Setters
+    public void setSenderName(String senderName) {
+        this.senderName = senderName;
     }
 
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setAssignedAgent(DeliveryAgent assignedAgent) {
+        this.assignedAgent = assignedAgent;
+    }
+
+    @Override
+    public String toString() {
+        return "Package ID: " + packageId +
+                ", Sender: " + senderName +
+                ", Receiver: " + receiverName +
+                ", Address: " + address +
+                ", Weight: " + weight +
+                ", Type: " + type +
+                ", Status: " + status +
+                ", Agent ID: " + (assignedAgent != null ? assignedAgent.getAgentId() : "None");
+    }
 }
