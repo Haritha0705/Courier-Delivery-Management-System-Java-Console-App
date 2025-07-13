@@ -50,7 +50,6 @@ public class Package {
     public String getStatus() {
         return status;
     }
-
     public DeliveryAgent getAssignedAgent() {
         return assignedAgent;
     }

@@ -70,8 +70,11 @@ public class DeliveryAgent {
 
     @Override
     public String toString() {
-        return "Id: " + agentId + ", Name: " + name + ", Location: " + location +
-                ", Status: " + status + ", Completed Deliveries: " + completedDeliveries +
+        return "Id: " + agentId +
+                ", Name: " + name +
+                ", Location: " + location +
+                ", Status: " + status +
+                ", Completed Deliveries: " + completedDeliveries +
                 ", Assigned Packages: " + assignedPackages.size();
     }
 }
