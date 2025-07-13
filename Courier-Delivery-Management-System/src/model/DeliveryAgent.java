@@ -49,4 +49,9 @@ public class DeliveryAgent {
         this.assignedPackages=assignedPackages;
         return assignedPackages;
     }
+
+    @Override
+    public String toString(){
+        return "Id: " + agentId + ", Name: " + name + ", Location: " + location + ", Status: " + status + ", Completed Deliveries: " + completedDeliveries + ", Assigned Packages: " + assignedPackages;
+    }
 }

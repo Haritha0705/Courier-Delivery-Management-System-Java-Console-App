@@ -57,4 +57,9 @@ public class Package {
         return assignedAgent;
     }
 
+    @Override
+    public String toString(){
+        return "Id: " + packageId + ", SName: " + senderName + ", RName: " + receiverName + ", Address: " + address + ", Weight: " + weight + ", Type: " + type + ", Status: " + status+ ", Assigned Agent: " + assignedAgent;
+    }
+
 }
