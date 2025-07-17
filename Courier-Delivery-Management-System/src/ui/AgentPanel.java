@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class AgentPanel {
 
     private static List<Package> packages = new ArrayList<>();
+    private static List<DeliveryAgent> deliveryAgents = new ArrayList<>();
 
     public static void ViewAssignedPackages(Scanner scanner){
         System.out.println("Enter your Id");
@@ -40,5 +41,19 @@ public class AgentPanel {
         if (!found){
             System.out.println("No packages assigned to Agent ID: " + id);
         }
+    }
+
+    public static void UpdateDeliveryStatus(Scanner scanner){
+        System.out.println("Enter your pak ID : ");
+        String id = scanner.nextLine();
+
+        for (DeliveryAgent  d : deliveryAgents){
+            System.out.println("Enter new Status");
+            d.setStatus(scanner.nextLine());
+
+            System.out.println("Delivery updated.");
+            return;
+        }
+        System.out.println("Package not found.");
     }
 }
