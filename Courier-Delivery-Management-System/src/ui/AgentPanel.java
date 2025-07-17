@@ -56,4 +56,15 @@ public class AgentPanel {
         }
         System.out.println("Package not found.");
     }
+
+    public static void ViewDeliveryHistory(Scanner scanner){
+        System.out.println("Enter agent ID : ");
+        String id = scanner.nextLine();
+
+        for (DeliveryAgent d: deliveryAgents){
+            System.out.println(d.getAssignedPackages());
+            return;
+        }
+        System.out.println("Package not found.");
+    }
 }
